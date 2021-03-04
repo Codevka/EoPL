@@ -25,3 +25,21 @@
       )
     )))
     
+(define plus
+  (lambda (x y)
+    (if (is-zero? x)
+      y
+      (successor (plus (predecessor x) y)))))
+      
+; too slow
+(define multiply
+  (lambda (x y)
+    (if (is-zero? x)
+      (zero)
+      (plus y (multiply (predecessor x) y)))))
+
+(define factorial
+  (lambda (n)
+    (if (is-zero? n)
+      (successor (zero))
+      (multiply n (factorial (predecessor n))))))
