@@ -12,8 +12,7 @@
       (if (< (car n) (- base 1))
         (cons (+ (car n) 1) (cdr n))
         (cons 0 (successor (cdr n)))
-      )
-    )))
+      ))))
     
 (define predecessor 
   (lambda (n)
@@ -22,8 +21,7 @@
       (if (< (car n) 1)
         (cons (- base 1) (predecessor (cdr n)))
         (cons (- (car n) 1) (cdr n))
-      )
-    )))
+      ))))
     
 (define plus
   (lambda (x y)
