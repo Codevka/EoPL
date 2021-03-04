@@ -5,7 +5,7 @@
     (if (null? lst)
       '()
       (cons 
-        (cons (cadr (car lst)) (car (car lst)))
+        (list (cadr (car lst)) (car (car lst)))
         (invert (cdr lst))))))
         
 ; (invert '((a 1) (a 2) (1 b) (2 b)))
